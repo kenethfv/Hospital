@@ -9,4 +9,4 @@ El proyecto consistirá en la administración de un Hospital el en el cual se po
 *graficas
 *tener un Dashboard dinamico
 
-#Keneth Fernando Vasquez Moran,  Carnet: 3190-19-502
+# Keneth Fernando Vasquez Moran,  Carnet: 3190-19-502
