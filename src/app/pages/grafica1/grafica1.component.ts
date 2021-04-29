@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { ChartType } from 'chart.js';
+
 
 
 @Component({
@@ -10,15 +10,9 @@ import { Component } from '@angular/core';
 })
 export class Grafica1Component {
 
-  public label: string[] = ['Pan', 'Gaseosa', 'Taco'];
-  public data: number[] = [100, 200, 400];
-
-  get getLabel(){
-    return this.label;
-  }
-  get getData(){
-    return this.data;
-  }
-  
+  public labels1: string[] = ['Pan', 'Refresco', 'Tacos'];
+  public data1 = [
+    [10, 15, 40],
+  ];
 
 }
