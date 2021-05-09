@@ -24,12 +24,16 @@ router.post( '/',
  ); 
 
  router.put( '/:id',
- [ 
-    
-],
-actualizarMedico );
+    [ 
+        validarJWT,
+        check('nombre', 'El nombre del Medico es necesario').not().isEmpty(),
+        check('nombre', 'El Id del Hospital es necesario').not().isEmpty(),
+        validarCampos
+    ],
+    actualizarMedico );
 
  router.delete( '/:id',
+    validarJWT,
     borrarMedico 
 );
 

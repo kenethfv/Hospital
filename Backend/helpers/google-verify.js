@@ -4,7 +4,6 @@ const client = new OAuth2Client( '119178675271-6j9hbbado471d1m36gncl3qv8t8ptemr.
 
 const googleVerify = async( token ) => {
 
-    console.log('hola mundo');
     try {
         const ticket = await client.verifyIdToken({
             idToken: token,
@@ -12,13 +11,10 @@ const googleVerify = async( token ) => {
             // Or, if multiple clients access the backend:
             //[CLIENT_ID_1, CLIENT_ID_2, CLIENT_ID_3]
         });
-        console.log('hola mundo2');
-         const payload = ticket.getPayload();
-        const userid = payload['sub'];
-    
-        console.log(payload);
+
+        const payload = ticket.getPayload();   
         const { name, email, picture } = payload;
-    
+
         return { name, email, picture };  
     } catch (error) {
         console.log(error)
