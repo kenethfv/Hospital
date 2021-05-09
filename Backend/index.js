@@ -16,7 +16,10 @@ app.use( cors() );
 app.use( express.json() );
 
 //Base de Datos
-dbConnection(); 
+dbConnection();
+
+// Directorio Publico
+app.use( express.static('public') );
 
 //Rutas
 app.use( '/api/usuarios', require('./routes/usuarios') )
