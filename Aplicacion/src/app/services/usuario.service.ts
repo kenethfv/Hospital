@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 import { registerForm } from '../interfaces/register-form.interface';
 import { loginForm } from '../interfaces/login-form.interface';
@@ -29,21 +29,6 @@ export class UsuarioService {
                 private ngZone: NgZone ) {
     this.googleInit();
   }
-
-/*  googleInit() {
-
-    return new Promise( resolve => {
-      gapi.load('auth2', () => {
-        this.auth2 = gapi.auth2.init({
-          client_id: '466540045750-pauq85g516s0djc77gt7fblu727usoj2.apps.googleusercontent.com',
-          cookiepolicy: 'single_host_origin',
-        });
-
-        resolve();
-      });
-    })
-
-  }*/
 
   get token(): string {
     return localStorage.getItem('token') || '';
